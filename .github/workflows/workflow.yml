@@ -14,10 +14,10 @@ jobs:
     steps:
         - name: install clang-format
           run: sudo apt install clang-format
-        - name: run clang-format
-          run: clang-format main.cpp
         - name: checkout repository and submodules
           uses: actions/checkout@v3.1.0
+        - name: run clang-format
+          run: clang-format main.cpp
         - name: Git diffs check
           if: success() || failure()
           run: git diff --exit-code -- .
