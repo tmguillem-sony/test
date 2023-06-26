@@ -21,7 +21,7 @@ jobs:
         - name: checkout repository and submodules
           uses: actions/checkout@v3.1.0
         - name: run clang-format
-          run: clang-format main.cpp
+          run: clang-format -i main.cpp
         - name: Git diffs check
           if: success() || failure()
           run: git diff --exit-code -- .
