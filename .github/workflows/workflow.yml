@@ -12,7 +12,7 @@ jobs:
   test_static:
     runs-on: [ubuntu-latest]
     steps:
-    	- name: install clang-format
-    	  run: sudo apt install clang-format
-	- name: run clang-format
-	  run: clang-format .
+        - name: install clang-format
+          run: sudo apt install clang-format
+        - name: run clang-format
+          run: clang-format .
